@@ -1,4 +1,5 @@
 import './App.css';
+import Form from './components/Form'
 
 function App() {
   return (
@@ -12,13 +13,7 @@ function App() {
           <p><em>Try it free for 7 days</em> then $20/mo. thereafer</p>
         </div>
         <div ClassName="formcontainer">
-        <form>
-        <input id="first"></input>
-        <input id="last"></input>
-        <input id="email"></input>
-        <input id="password"></input>
-        <submit><button>CLAIM YOUR FREE TRIAL</button></submit>
-        </form>
+        <Form />
         <span ClassName="disclaimer">By clicking the button, you are agreeing to our <a href="index.html">Terms and Services</a></span>
         </div>
       </div>
