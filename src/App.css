@@ -15,14 +15,14 @@ p {
 
 .App {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: baseline;
   flex-wrap: wrap;
   color: #fff;
 }
 
 .right {
-  margin: 150px 30px 20px 30px;
+  margin: 150px 40px 20px 50px;
   flex-direction: column;
   justify-content: space-evenly;
   align-self: center;
