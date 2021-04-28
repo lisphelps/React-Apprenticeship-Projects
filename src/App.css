@@ -48,6 +48,9 @@ a:link, a:visited, a:hover, a:active {
   font-weight: 700;
 }
 
+input:focus, textarea:focus, select:focus {
+  outline: none;
+}
 /*
 ## Colors
 
