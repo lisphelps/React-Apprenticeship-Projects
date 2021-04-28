@@ -1,0 +1,13 @@
+.right {
+    margin: 100px 50px 50px 50px;
+    align-self: center;
+    width: 500px;
+  }
+  
+  .tryit {
+    text-align: center;
+    background-color: hsl(248, 32%, 49%);
+    border-radius: 8px;
+    box-shadow: 0 8px 1px rgba(0, 0, 0, 0.158);
+    padding: 2px;
+  }

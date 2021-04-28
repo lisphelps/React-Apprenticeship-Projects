@@ -38,35 +38,42 @@ function Form() {
                 value={values.first}
                 className={submitted && !values.first ? "error" : null}
                 placeholder="First Name"
-                />{submitted && !values.first ? <p id="oops">First Name cannot be empty</p> : null}
+                />
+                {submitted && !values.first ? <p id="oops">First Name cannot be empty</p> : null}
+                
                 <input
                 onChange={handleLastInputChange}
                 value={values.last}
                 className={submitted && !values.last ? "error" : null}
                 placeholder="Last Name"
-                />{submitted && !values.last ? <p id="oops">Last Name cannot be empty</p> : null}
+                />
+                {submitted && !values.last ? <p id="oops">Last Name cannot be empty</p> : null}
+                
                 <input 
                 onChange={handleEmailInputChange}
                 value={values.email}
                 // eslint-disable-next-line
                 className={submitted && !values.email || submitted && !validEmail.test(values.email) ? "error" : null}
                 placeholder="Email"
-                />{submitted && !values.email ? <p id="oops">Please enter an email address</p> : null}
-                 {submitted && values.email && !validEmail.test(values.email) ? <p id="oops">Looks like this is not an email</p>: null}
+                />
+                {submitted && !values.email ? <p id="oops">Please enter an email address</p> : null}
+                {submitted && values.email && !validEmail.test(values.email) ? <p id="oops">Looks like this is not an email</p>: null}
+
                 <input 
                 onChange={handlePwInputChange}
                 value={values.password}
                 type="password"
                 className={submitted && !values.password ? "error" : null}
                 placeholder="Password"
-                />{submitted && !values.password ? <p id="oops">Password cannot be empty</p> : null}
-                <br />
+                />
+                {submitted && !values.password ? <p id="oops">Password cannot be empty</p> : null}
+
                 <button id="submit" type="submit" onSubmit={handleSubmit}>CLAIM YOUR FREE TRIAL</button>
                 <br />
-                <span className="disclaimer">By clicking the button, you are agreeing to our <a href="index.html">Terms and Services</a></span><br /><br />
+                <span className="disclaimer">By clicking the button, you are agreeing to our <a href="index.html">Terms and Services</a></span>
+                <br /><br />
             </form>
         </div>
-
     )
 } 
 

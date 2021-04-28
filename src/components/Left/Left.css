@@ -1,15 +1,16 @@
 .Left {
     text-align: left;
-    height: 200px;
+    height: 400px;
     width: 500px;
-    margin: 210px 50px 10px 40px;
+    margin: 150px 50px 10px 40px;
 }
 
-h1 {
+#learn {
     font-size: 1.25cm;
     text-align: left;
 }
 
 .leftcontent {
     text-align: left;
+    font-size: 16px;
 }

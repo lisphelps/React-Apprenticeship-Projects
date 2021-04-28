@@ -1,31 +1,24 @@
 .login {
-    justify-content: space-between;
     background-color: #FFF;
-    border-radius: 5px;
+    border-radius: 8px;
     box-shadow: 0 8px 1px rgba(0, 0, 0, 0.158);
-    align-content: left;
-    padding: 20px;
+    padding: 25px;
     text-align: center;
 }
 
 
 input, select, textarea {
     margin: 10px;
-    border: gray;
+    border: hsl(246, 39%, 85%);
     border: 2px solid #f0f0f0;
-    border-radius: 4px;
+    border-radius: 6px;
     width: 90%;
-    padding: 10px;
-    font-size: 12px;
+    padding: 15px;
     font-weight: 600;
-    text-align: justify;
 }
 
 input:hover, input:focus, textarea:focus, select:focus {
-    border: 2px solid hsl(246, 25%, 77%) ;
-}
-.error-line-active input:focus, .error-line-active textarea:focus {
-    border: 2px solid hsl(0, 100%, 74%) !important;
+    border: 2px solid hsl(246, 25%, 77%);
 }
 
 .error {
@@ -42,19 +35,19 @@ input.error::-webkit-input-placeholder {
     color: #fff;
 }
 input.error:hover, input.error:focus {
-    border: 2px solid  hsl(0, 100%, 74%);
+    border: 2px solid  hsl(0, 47%, 49%);
 }
 
 button {
     background-color: hsl(154, 59%, 51%);
     color: white;
-    width: 85%;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    box-shadow: inset 0 0 5px rgb(155, 155, 155);
+    width: 97%;
+    padding: 15px;
     margin: 10px;
-    font-size: 10;
+    border: none;
+    border-radius: 6px;
+    box-shadow: inset 0 -5px 1px hsl(154, 59%, 39%);
+    font-weight: 500;
 }
 
 button:hover {
@@ -70,11 +63,10 @@ button:active {
     font-size: 10px;
     font-style: italic;
     text-align: right;
-    margin: -5px 15px 0px -5px;
+    margin: -5px 5px 0px -5px;
 }
 
 .disclaimer {
-    font-size: 8px;
+    font-size: 9px;
     color: #afafaf;
-    text-align: center;
   }

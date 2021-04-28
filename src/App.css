@@ -9,62 +9,25 @@ html {
   background-color: hsl(0, 100%, 74%);
 }
 
-p {
-  font-size: 16px;
-}
-
 .App {
   display: flex;
   justify-content: center;
-  align-items: baseline;
+  align-items: center;
   flex-wrap: wrap;
   color: #fff;
 }
 
-.right {
-  margin: 150px 40px 20px 50px;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-self: center;
-  width: 500px;
-}
-
-.formcontainer {
-  width: 500px;
-  background-color: white;
-
-}
-
-.tryit {
-  text-align: center;
-  background-color: hsl(248, 32%, 49%);
-  border-radius: 8px;
-  box-shadow: 0 8px 1px rgba(0, 0, 0, 0.158);
-  padding: 2px;
-}
-
-a:link, a:visited, a:hover, a:active {
+a:link, a:visited, a:active {
   color: hsl(0, 100%, 74%);
   font-weight: 700;
+  text-decoration: none;
+}
+
+a:hover {
+  color: hsl(249, 10%, 26%);
+  font-weight: 800;
 }
 
 input:focus, textarea:focus, select:focus {
   outline: none;
 }
-/*
-## Colors
-
-### Primary
-
-- Red: hsl(0, 100%, 74%) 
-- Green: hsl(154, 59%, 51%)
-
-### Accent
-
-- Blue: hsl(248, 32%, 49%)
-
-### Neutral
-
-- Dark Blue: hsl(249, 10%, 26%) 
-- Grayish Blue: hsl(246, 25%, 77%)
-*/
