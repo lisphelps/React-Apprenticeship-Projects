@@ -1,21 +1,16 @@
 import './App.css';
-import Form from './components/Form'
+import Form from './components/Form/Form'
+import Left from './components/Left/Left'
 
 function App() {
   return (
     <div className="App">
-      <div ClassName="left">
-        <h1>Learn to code by watching others</h1>
-          <p>See how experienced developers solve problems in real-time. watching scripted tutorials is great, but understanding how developers think is invaluable.</p>
-      </div>
-      <div ClassName="right">
-        <div ClassName="tryit">
-          <p><em>Try it free for 7 days</em> then $20/mo. thereafer</p>
-        </div>
-        <div ClassName="formcontainer">
+      <Left />
+      <div className="right">
+        <div className="tryit">
+          <p><strong>Try it free for 7 days</strong> then $20/mo. thereafer</p>
+        </div><br />
         <Form />
-        <span ClassName="disclaimer">By clicking the button, you are agreeing to our <a href="index.html">Terms and Services</a></span>
-        </div>
       </div>
     </div>
   );

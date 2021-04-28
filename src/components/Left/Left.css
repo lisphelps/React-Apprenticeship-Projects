@@ -1,0 +1,15 @@
+.Left {
+    text-align: left;
+    height: 200px;
+    width: 500px;
+    margin: 200px 30px 0px 40px;
+}
+
+h1 {
+    font-size: 1.25cm;
+    text-align: left;
+}
+
+.leftcontent {
+    text-align: left;
+}
