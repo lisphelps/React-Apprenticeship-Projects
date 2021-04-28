@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/intro-component-with-signup-form-master/static/css/main.71ebc576.chunk.css",
+    "main.js": "/intro-component-with-signup-form-master/static/js/main.75136031.chunk.js",
+    "main.js.map": "/intro-component-with-signup-form-master/static/js/main.75136031.chunk.js.map",
+    "runtime-main.js": "/intro-component-with-signup-form-master/static/js/runtime-main.23d516e2.js",
+    "runtime-main.js.map": "/intro-component-with-signup-form-master/static/js/runtime-main.23d516e2.js.map",
+    "static/js/2.0e5172eb.chunk.js": "/intro-component-with-signup-form-master/static/js/2.0e5172eb.chunk.js",
+    "static/js/2.0e5172eb.chunk.js.map": "/intro-component-with-signup-form-master/static/js/2.0e5172eb.chunk.js.map",
+    "index.html": "/intro-component-with-signup-form-master/index.html",
+    "static/css/main.71ebc576.chunk.css.map": "/intro-component-with-signup-form-master/static/css/main.71ebc576.chunk.css.map",
+    "static/js/2.0e5172eb.chunk.js.LICENSE.txt": "/intro-component-with-signup-form-master/static/js/2.0e5172eb.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/intro-component-with-signup-form-master/static/media/bg-intro-desktop.059183ee.png",
+    "static/media/Form.css": "/intro-component-with-signup-form-master/static/media/icon-error.b72f792e.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.23d516e2.js",
+    "static/js/2.0e5172eb.chunk.js",
+    "static/css/main.71ebc576.chunk.css",
+    "static/js/main.75136031.chunk.js"
+  ]
+}
