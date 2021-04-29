@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-
 import './Form.css';
 
 function Form() {
@@ -24,6 +23,7 @@ function Form() {
   const handlePwInputChange = (event) => {
     setValues({ ...values, password: event.target.value });
   };
+
   const handleSubmit = (event) => {
     event.preventDefault();
     setSubmitted(true);

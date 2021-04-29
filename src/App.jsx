@@ -5,7 +5,6 @@ import Right from './components/Right/Right';
 
 function App() {
   return (
-
     <div className="App">
       <Left />
       <Right />

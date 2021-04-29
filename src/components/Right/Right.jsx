@@ -8,8 +8,7 @@ export default function Right() {
       <div className="tryit">
         <p>
           <strong>Try it free for 7 days</strong>
-          {' '}
-          then $20/mo. thereafer
+          <span> then $20/mo. thereafer</span>
         </p>
       </div>
       <br />
