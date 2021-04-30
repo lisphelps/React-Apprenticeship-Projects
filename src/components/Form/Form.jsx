@@ -2,28 +2,15 @@ import React, { useState } from 'react';
 import './Form.css';
 
 function Form() {
-  const [values, setValues] = useState({
-    first: '',
-    last: '',
-    email: '',
-    password: '',
-  });
-
   const [submitted, setSubmitted] = useState(false);
 
-  const handleFirstInputChange = (event) => {
-    setValues({ ...values, first: event.target.value });
+  const [first, setFirst] = useState();
+  const [last, setLast] = useState();
+  const [email, setEmail] = useState();
+  const [password, setPassword] = useState();
+  const handleInputChange = (event, callback) => {
+    callback(event.target.value);
   };
-  const handleLastInputChange = (event) => {
-    setValues({ ...values, last: event.target.value });
-  };
-  const handleEmailInputChange = (event) => {
-    setValues({ ...values, email: event.target.value });
-  };
-  const handlePwInputChange = (event) => {
-    setValues({ ...values, password: event.target.value });
-  };
-
   const handleSubmit = (event) => {
     event.preventDefault();
     setSubmitted(true);
@@ -34,38 +21,43 @@ function Form() {
     <div className="FormContainer">
       <form className="login" onSubmit={handleSubmit}>
         <input
-          onChange={handleFirstInputChange}
-          value={values.first}
-          className={submitted && !values.first ? 'error' : null}
+          onChange={(event) => handleInputChange(event, setFirst)}
+          value={first}
+          className={(submitted && !first) && 'error'} // short circuiting
           placeholder="First Name"
         />
-        {submitted && !values.first ? <p id="oops">First Name cannot be empty</p> : null}
+        {submitted && !first ? <p id="oops">First Name cannot be empty</p> : null}
 
         <input
-          onChange={handleLastInputChange}
-          value={values.last}
-          className={submitted && !values.last ? 'error' : null}
+          onChange={(event) => handleInputChange(event, setLast)}
+          value={last}
+          className={submitted && !last ? 'error' : null}
           placeholder="Last Name"
         />
-        {submitted && !values.last ? <p id="oops">Last Name cannot be empty</p> : null}
+        {submitted && !last ? <p id="oops">Last Name cannot be empty</p> : null}
 
         <input
-          onChange={handleEmailInputChange}
-          value={values.email}
-          className={(submitted && !values.email) || (submitted && !validEmail.test(values.email)) ? 'error' : null}
+          onChange={(event) => handleInputChange(event, setEmail)}
+          value={email}
+          className={(submitted && !email) || (submitted && !validEmail.test(email)) ? 'error' : null}
           placeholder="Email"
         />
-        {submitted && !values.email ? <p id="oops">Please enter an email address</p> : null}
-        {submitted && values.email && !validEmail.test(values.email) ? <p id="oops">Looks like this is not an email</p> : null}
+        {
+          submitted && !validEmail.test(email) && (
+            <p id="oops">
+              {!email ? 'Please enter an email address' : 'Looks like this is not an email'}
+            </p>
+          )
+        }
 
         <input
-          onChange={handlePwInputChange}
-          value={values.password}
+          onChange={(event) => handleInputChange(event, setPassword)}
+          value={password}
           type="password"
-          className={submitted && !values.password ? 'error' : null}
+          className={submitted && !password ? 'error' : null}
           placeholder="Password"
         />
-        {submitted && !values.password ? <p id="oops">Password cannot be empty</p> : null}
+        {submitted && !password ? <p id="oops">Password cannot be empty</p> : null}
 
         <button id="submit" type="submit" onSubmit={handleSubmit}>CLAIM YOUR FREE TRIAL</button>
         <br />
