@@ -3,7 +3,6 @@ import './Form.css';
 
 function Form() {
   const [submitted, setSubmitted] = useState(false);
-
   const [first, setFirst] = useState();
   const [last, setLast] = useState();
   const [email, setEmail] = useState();
