@@ -39,14 +39,14 @@ input.error:hover, input.error:focus {
 }
 
 button {
-    background-color: hsl(154, 59%, 51%);
+    background-color: #03d5e0;
     color: white;
     width: 97%;
     padding: 15px;
     margin: 10px;
     border: none;
     border-radius: 6px;
-    box-shadow: inset 0 -5px 1px hsl(154, 59%, 39%);
+    box-shadow: inset 0 -5px 1px #03bbc5;
     font-weight: 500;
 }
 
@@ -55,7 +55,8 @@ button:hover {
 }
 
 button:active {
-    background-color:hsl(154, 72%, 57%);
+    background-color:#81f1f7;
+    box-shadow: inset 0 -5px 1px #03d5e0;
 }
 
 #oops {

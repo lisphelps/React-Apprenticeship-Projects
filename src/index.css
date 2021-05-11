@@ -5,12 +5,12 @@
 }
 
 html {
-  background: url("./images/bg-intro-desktop.png") no-repeat center center fixed;
-  background-color: hsl(0, 100%, 74%);
+  background: url("./images/leaf-pattern-background.jpg") no-repeat center center fixed;
+  background-color: #9dffb0;
 }
 
 a:link, a:visited, a:active {
-  color: hsl(0, 100%, 74%);
+  color: #c48d3f;
   font-weight: 700;
   text-decoration: none;
 }

@@ -1,20 +1,29 @@
+/* eslint-disable no-console */
 import React, { useState } from 'react';
 import './Form.css';
+import PropTypes from 'prop-types';
 
-function Form() {
+function Form({ setTest }) {
   const [submitted, setSubmitted] = useState(false);
-  const [first, setFirst] = useState();
-  const [last, setLast] = useState();
-  const [email, setEmail] = useState();
-  const [password, setPassword] = useState();
+  const [first, setFirst] = useState('');
+  const [last, setLast] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const validEmail = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
+
   const handleInputChange = (event, callback) => {
     callback(event.target.value);
+  };
+  const validateForm = () => {
+    if (first && last && email && validEmail.test(email) && password) {
+      setTest(true);
+    }
   };
   const handleSubmit = (event) => {
     event.preventDefault();
     setSubmitted(true);
+    validateForm();
   };
-  const validEmail = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
 
   return (
     <div className="FormContainer">
@@ -22,7 +31,7 @@ function Form() {
         <input
           onChange={(event) => handleInputChange(event, setFirst)}
           value={first}
-          className={(submitted && !first) && 'error'} // short circuiting
+          className={submitted && !first ? 'error' : null}
           placeholder="First Name"
         />
         {submitted && !first ? <p id="oops">First Name cannot be empty</p> : null}
@@ -62,7 +71,7 @@ function Form() {
         <br />
         <span className="disclaimer">
           By clicking the button, you are agreeing to our
-          <a href="index.html">Terms and Services</a>
+          <a href="index.html"> Terms and Services</a>
         </span>
         <br />
         <br />
@@ -70,5 +79,9 @@ function Form() {
     </div>
   );
 }
+
+Form.propTypes = {
+  setTest: PropTypes.func.isRequired,
+};
 
 export default Form;
