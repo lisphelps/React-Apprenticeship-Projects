@@ -1,0 +1,11 @@
+.Box {
+    border-radius: 8px;
+    box-shadow: 0 8px 1px rgba(0, 0, 0, 0.158);
+    padding: 30px;
+    text-align: center;
+}
+
+#avatar {
+    border-radius: 20px;
+    border: solid;
+}
