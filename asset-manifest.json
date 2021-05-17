@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/intro-component-with-signup-form-master/static/css/main.d960ea54.chunk.css",
-    "main.js": "/intro-component-with-signup-form-master/static/js/main.a45440ce.chunk.js",
-    "main.js.map": "/intro-component-with-signup-form-master/static/js/main.a45440ce.chunk.js.map",
+    "main.js": "/intro-component-with-signup-form-master/static/js/main.94040951.chunk.js",
+    "main.js.map": "/intro-component-with-signup-form-master/static/js/main.94040951.chunk.js.map",
     "runtime-main.js": "/intro-component-with-signup-form-master/static/js/runtime-main.23d516e2.js",
     "runtime-main.js.map": "/intro-component-with-signup-form-master/static/js/runtime-main.23d516e2.js.map",
     "static/js/2.ae1802d4.chunk.js": "/intro-component-with-signup-form-master/static/js/2.ae1802d4.chunk.js",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.23d516e2.js",
     "static/js/2.ae1802d4.chunk.js",
     "static/css/main.d960ea54.chunk.css",
-    "static/js/main.a45440ce.chunk.js"
+    "static/js/main.94040951.chunk.js"
   ]
 }
