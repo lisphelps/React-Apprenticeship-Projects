@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Form.css';
 import PropTypes from 'prop-types';
 
-function Form({ setTest }) {
+function Form({ setValidated }) {
   const [submitted, setSubmitted] = useState(false);
   const [first, setFirst] = useState('');
   const [last, setLast] = useState('');
@@ -15,7 +15,7 @@ function Form({ setTest }) {
   };
   const validateForm = () => {
     if (first && last && email && validEmail.test(email) && password) {
-      setTest(true);
+      setValidated(true);
     }
   };
   const handleSubmit = (event) => {
@@ -80,7 +80,7 @@ function Form({ setTest }) {
 }
 
 Form.propTypes = {
-  setTest: PropTypes.func.isRequired,
+  setValidated: PropTypes.func.isRequired,
 };
 
 export default Form;

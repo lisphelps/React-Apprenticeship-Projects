@@ -4,17 +4,17 @@ import PropTypes from 'prop-types';
 import Left from '../Left/Left';
 import Right from '../Right/Right';
 
-function Login({ setTest }) {
+function Login({ setValidated }) {
   return (
     <div className="Login">
       <Left />
-      <Right setTest={setTest} />
+      <Right setValidated={setValidated} />
     </div>
   );
 }
 
 Login.propTypes = {
-  setTest: PropTypes.func.isRequired,
+  setValidated: PropTypes.func.isRequired,
 };
 
 export default Login;

@@ -3,15 +3,13 @@ import Login from './components/Login/Login';
 import Main from './components/Main/Main';
 
 function App() {
-//  const [validated, setValidated] = useState(false);
-  const [test, setTest] = useState(false);
+  const [validated, setValidated] = useState(false);
 
   return (
     <div>
-      <Login />
-      {(test)
+      {(validated)
         ? <Main />
-        : <Login setTest={setTest} />}
+        : <Login setValidated={setValidated} />}
     </div>
   );
 }
