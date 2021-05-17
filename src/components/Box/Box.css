@@ -1,11 +1,47 @@
-.Box {
+#box {
     border-radius: 8px;
     box-shadow: 0 8px 1px rgba(0, 0, 0, 0.158);
-    padding: 30px;
-    text-align: center;
+    padding: 25px;
 }
 
 #avatar {
-    border-radius: 20px;
+    border-radius: 30px;
     border: solid;
+    height: 50px;
+    width: 50px;
+    float: left;
+    margin: 10px 30px 15px 15px;
+    background-color: black;
+}
+
+#user h3 {
+    margin: -5px 0px -15px 0px;
+}
+
+#user p {
+    font-size: 12px;
+}
+
+.Punchy { 
+    grid-area: Punchy; 
+    background: url('/src/images/catchfish.png') 90% 90% no-repeat; 
+    background-size: 25%;
+}
+
+.Vladimir { 
+    grid-area: Vladimir; 
+}
+
+.Midge { 
+    grid-area: Midge; 
+    background: url('/src/images/palmtree.png') 50% 98% no-repeat; 
+    background-size: 90%;
+}
+
+.Maddie { 
+    grid-area: Maddie; 
+}
+
+.Sherb { 
+    grid-area: Sherb; 
 }

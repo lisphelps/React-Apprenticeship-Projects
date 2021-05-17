@@ -1,6 +1,7 @@
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+... and Linted using ESLint with Babel and AirBnB.
 
 ## Available Scripts
 

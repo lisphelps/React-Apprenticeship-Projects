@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Form from '../Form/Form';
 import './Right.css';
 
-export default function Right({ setTest }) {
+export default function Right({ setValidated }) {
   return (
     <div className="right">
       <div className="tryit">
@@ -13,11 +13,11 @@ export default function Right({ setTest }) {
         </p>
       </div>
       <br />
-      <Form setTest={setTest} />
+      <Form setValidated={setValidated} />
     </div>
   );
 }
 
 Right.propTypes = {
-  setTest: PropTypes.func.isRequired,
+  setValidated: PropTypes.func.isRequired,
 };

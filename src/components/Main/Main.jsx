@@ -1,8 +1,8 @@
+/* eslint-disable no-console */
 /* eslint-disable no-useless-computed-key */
 /* eslint-disable quotes */
 import './Main.css';
 import React from 'react';
-// import PropTypes from 'prop-types';
 import useFetch from '../api/useFetch';
 import Box from '../Box/Box';
 
@@ -17,12 +17,12 @@ export default function Main() {
 
   return (
     <div className="Main">
-      {villagers.map((villager) => (
+      {villagers.map((villager) => villager.id && (
         <Box
           key={villager.id}
-          name={villager.name["US-en"]}
-          text={villager['text-Color']}
-          bubble={villager['bubble-Color']}
+          name={villager.name["name-USen"]}
+          text={villager["text-color"]}
+          bubble={villager["bubble-color"]}
           iconurl={villager.icon_uri}
           species={villager.species}
           personality={villager.personality}
