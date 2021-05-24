@@ -5,3 +5,34 @@
   flex-wrap: wrap;
   color: #fbfeb2;
 }
+
+.Left {
+  text-align: left;
+  height: 400px;
+  width: 500px;
+  margin: 150px 50px 10px 40px;
+}
+
+#learn {
+  font-size: 1.25cm;
+  text-align: left;
+}
+
+.leftcontent {
+  text-align: left;
+  font-size: 16px;
+}
+
+.right {
+  margin: 100px 50px 50px 50px;
+  align-self: center;
+  width: 500px;
+}
+
+.tryit {
+  text-align: center;
+  background-color: #c48d3f;
+  border-radius: 8px;
+  box-shadow: 0 8px 1px rgba(0, 0, 0, 0.158);
+  padding: 2px;
+}

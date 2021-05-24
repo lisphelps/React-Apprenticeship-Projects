@@ -2,12 +2,13 @@
     margin: 50px 50px 20px 50px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 50px 50px;
+    grid-template-rows: .2fr 1fr 1fr;
+    gap: 40px 40px;
     grid-template-areas:
-        "Punchy Punchy Vladimir Midge"
-        "Maddie Sherb Sherb Midge"
-        ". . . .";
+      ". nav nav ."
+      "Punchy Punchy Vladimir Midge"
+      "Maddie Sherb Sherb Midge";
+    align-content: center;
 }
 
 @media only screen and (max-width: 700px) {

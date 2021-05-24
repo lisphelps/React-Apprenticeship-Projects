@@ -1,10 +1,9 @@
-/* eslint-disable no-console */
-/* eslint-disable no-useless-computed-key */
 /* eslint-disable quotes */
 import './Main.css';
 import React from 'react';
 import useFetch from '../api/useFetch';
 import Box from '../Box/Box';
+import Navbar from '../Navbar/Navbar';
 
 export default function Main() {
   const { data: Punchy } = useFetch('https://acnhapi.com/v1/villagers/48');
@@ -17,6 +16,7 @@ export default function Main() {
 
   return (
     <div className="Main">
+      <Navbar className="nav" />
       {villagers.map((villager) => villager.id && (
         <Box
           key={villager.id}
