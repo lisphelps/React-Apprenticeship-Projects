@@ -1,9 +1,8 @@
 import './Login.css';
 import React from 'react';
-import PropTypes from 'prop-types';
 import Form from '../Form/Form';
 
-function Login({ setValidated }) {
+function Login() {
   return (
     <div className="Login">
       <div className="Left">
@@ -18,14 +17,10 @@ function Login({ setValidated }) {
           </p>
         </div>
         <br />
-        <Form setValidated={setValidated} />
+        <Form />
       </div>
     </div>
   );
 }
-
-Login.propTypes = {
-  setValidated: PropTypes.func.isRequired,
-};
 
 export default Login;
