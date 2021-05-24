@@ -16,8 +16,9 @@ export default function Main() {
 
   return (
     <div className="Main">
-      <Navbar className="nav" />
-      {villagers.map((villager) => villager.id && (
+      <Navbar />
+      <div className="Bubbles">
+        {villagers.map((villager) => villager.id && (
         <Box
           key={villager.id}
           name={villager.name["name-USen"]}
@@ -28,7 +29,8 @@ export default function Main() {
           personality={villager.personality}
           saying={villager.saying}
         />
-      ))}
+        ))}
+      </div>
     </div>
   );
 }
