@@ -14,7 +14,7 @@ function Form({ setValidated }) {
     callback(event.target.value);
   };
   const validateForm = () => {
-    if (name && email && validEmail.test(email) && password) {
+    if (name && email && validEmail.test(email) && password && validPW.test(password)) {
       setValidated(true);
     }
   };
@@ -22,6 +22,7 @@ function Form({ setValidated }) {
     event.preventDefault();
     setSubmitted(true);
     validateForm();
+    localStorage.setItem('user', name);
   };
 
   return (
