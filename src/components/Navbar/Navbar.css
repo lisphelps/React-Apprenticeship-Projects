@@ -1,20 +1,20 @@
 .nav {
-    display: flex;
+    overflow: hidden;
     background-color: #FFFFFF;
     border-radius: 8px;
     box-shadow: 0 8px 1px rgba(0, 0, 0, 0.158);
     padding: 25px 25px 50px 25px;
     height: 50px;
     justify-content: center;
-    margin: -10px 0 0 0;
 }
 
-ul li {
-    display: inline-block;
+.nav ul li {
+    display: block;
     margin: 10px 20px 20px 150px;
-}
-
-.navlink {
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
     font-size: 20px;
 }
 
@@ -33,12 +33,28 @@ ul li {
 
 @media only screen and (max-width: 600px) {
     .nav {
-        display: flex;
+        display: block;
         justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
     }
     .nav img {
         display: none;
     }
+
+    .nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+     }
+    
+    .nav li {
+        float: right;
+        margin-left: 15px;
+        margin-right: 25px;
+        display: block;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: .8em;
+      }
 }

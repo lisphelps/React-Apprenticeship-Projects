@@ -10,12 +10,8 @@
     height: 50px;
     width: 50px;
     float: left;
-    margin: 10px 30px 15px 15px;
+    margin: 10px 30px -10px 15px;
     background-color: black;
-}
-
-#user h3 {
-    margin: -5px 0px -15px 0px;
 }
 
 #user p {

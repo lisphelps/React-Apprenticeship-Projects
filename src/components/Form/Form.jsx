@@ -19,7 +19,8 @@ function Form() {
   const validateForm = () => {
     if (username && email && validEmail.test(email) && password && validPW.test(password)) {
       setIsLoggedIn(true);
-      localStorage.setItem('user', username);
+      sessionStorage.setItem('user', username);
+      sessionStorage.setItem('setIsLoggedIn', 'true');
       history.push('/testimonials');
     }
   };

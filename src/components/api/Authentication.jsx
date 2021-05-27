@@ -4,7 +4,8 @@ import PropTypes from 'prop-types';
 export const AuthContext = createContext();
 
 export const AuthContextProvider = ({ children }) => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const loggedIn = sessionStorage.getItem('setIsLoggedIn');
+  const [isLoggedIn, setIsLoggedIn] = useState(loggedIn);
 
   return (
     <AuthContext.Provider value={{ isLoggedIn, setIsLoggedIn }}>

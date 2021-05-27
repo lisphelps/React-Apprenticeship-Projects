@@ -11,11 +11,11 @@ function App() {
     <AuthContextProvider>
       <BrowserRouter>
         <Switch>
-          <PrivateRoute exact path="/" component={Main} />
           <PrivateRoute path="/testimonials" component={Main} />
           <PrivateRoute path="/shop" component={Shop} />
           <Route path="/logout" component={Login} />
           <Route path="/login" component={Login} />
+          <PrivateRoute path="/" component={Main} />
         </Switch>
       </BrowserRouter>
     </AuthContextProvider>
