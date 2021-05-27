@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import './Box.css';
 import React from 'react';
 import PropTypes from 'prop-types';
@@ -11,8 +10,6 @@ function Box(props) {
   const { species } = props;
   const { personality } = props;
   const { saying } = props;
-
-  console.log(name);
 
   return (
     <div className={name} id="box" style={{ color: `${text}`, backgroundColor: `${bubble}` }}>

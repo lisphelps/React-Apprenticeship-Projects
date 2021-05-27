@@ -1,26 +1,21 @@
-/* eslint-disable no-console */
-import React, { useContext } from 'react';
+import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { AuthContextProvider } from './components/api/Authentication';
 import Login from './components/Login/Login';
 import Main from './components/Main/Main';
 import Shop from './components/Shop/Shop';
-import { AuthContext, AuthContextProvider } from './components/api/AuthContext';
+import PrivateRoute from './components/api/PrivateRoute';
 
 function App() {
-  const { isValidated, setValidated } = useContext(AuthContext);
-
   return (
     <AuthContextProvider>
       <BrowserRouter>
         <Switch>
-          <Route exact path="/">
-            { isValidated
-              ? <Login setValidated={setValidated} />
-              : <Main /> }
-          </Route>
-          <Route path="/main" component={Main} />
-          <Route path="/shop" component={Shop} />
+          <PrivateRoute exact path="/" component={Main} />
+          <PrivateRoute path="/testimonials" component={Main} />
+          <PrivateRoute path="/shop" component={Shop} />
           <Route path="/logout" component={Login} />
+          <Route path="/login" component={Login} />
         </Switch>
       </BrowserRouter>
     </AuthContextProvider>

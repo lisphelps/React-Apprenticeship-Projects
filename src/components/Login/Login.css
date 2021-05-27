@@ -4,6 +4,7 @@
   align-items: center;
   flex-wrap: wrap;
   color: #fbfeb2;
+  text-align: center;
 }
 
 .Left {
@@ -34,5 +35,5 @@
   background-color: #c48d3f;
   border-radius: 8px;
   box-shadow: 0 8px 1px rgba(0, 0, 0, 0.158);
-  padding: 2px;
+  padding: 5px;
 }

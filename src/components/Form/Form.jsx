@@ -1,10 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import { useHistory } from 'react-router-dom';
+import { AuthContext } from '../api/Authentication';
 import './Form.css';
-import PropTypes from 'prop-types';
 
-function Form({ setValidated }) {
+function Form() {
+  const history = useHistory();
+  const { setIsLoggedIn } = useContext(AuthContext);
   const [submitted, setSubmitted] = useState(false);
-  const [name, setName] = useState('');
+  const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const validEmail = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
@@ -14,27 +17,28 @@ function Form({ setValidated }) {
     callback(event.target.value);
   };
   const validateForm = () => {
-    if (name && email && validEmail.test(email) && password && validPW.test(password)) {
-      setValidated(true);
+    if (username && email && validEmail.test(email) && password && validPW.test(password)) {
+      setIsLoggedIn(true);
+      localStorage.setItem('user', username);
+      history.push('/testimonials');
     }
   };
   const handleSubmit = (event) => {
     event.preventDefault();
     setSubmitted(true);
     validateForm();
-    localStorage.setItem('user', name);
   };
 
   return (
     <div className="FormContainer">
       <form className="login" onSubmit={handleSubmit}>
         <input
-          onChange={(event) => handleInputChange(event, setName)}
-          value={name}
-          className={submitted && !name ? 'error' : null}
+          onChange={(event) => handleInputChange(event, setUsername)}
+          value={username}
+          className={submitted && !username ? 'error' : null}
           placeholder="Name"
         />
-        {submitted && !name ? <p id="oops">Name cannot be empty</p> : null}
+        {submitted && !username ? <p id="oops">Name cannot be empty</p> : null}
 
         <input
           onChange={(event) => handleInputChange(event, setEmail)}
@@ -78,9 +82,5 @@ function Form({ setValidated }) {
     </div>
   );
 }
-
-Form.propTypes = {
-  setValidated: PropTypes.func.isRequired,
-};
 
 export default Form;
