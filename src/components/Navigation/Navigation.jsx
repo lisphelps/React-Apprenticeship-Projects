@@ -1,11 +1,11 @@
 import React, { useContext } from 'react';
 import { NavLink } from 'react-router-dom';
-import './Navbar.css';
-// import { pushRotate as Menu } from 'react-burger-menu/lib/menus/pushRotate';
+import './Navigation.css';
+import { HiOutlineMenu } from 'react-icons/hi';
 import nookfloat from './nookfloat.gif';
 import { AuthContext } from '../api/Authentication';
 
-export default function Navbar() {
+export default function Navigation() {
   const { setIsLoggedIn } = useContext(AuthContext);
   const user = sessionStorage.getItem('user');
   const logout = () => {
@@ -14,14 +14,17 @@ export default function Navbar() {
   };
 
   return (
-    <div className="nav" id="outer-container">
+    <div className="nav">
       <img id="nook" src={nookfloat} alt="Nook" />
-      <h1>
-        Howdy,
-        {' '}
-        {user}
-      </h1>
-      <main id="page-wrap">
+      <div id="howdy">
+        <h2>
+          Howdy,
+          {' '}
+          {user}
+          !
+        </h2>
+      </div>
+      <div id="desktopMenu">
         <ul>
           <li>
             <NavLink className="navlink" activeClassName="navactive" to="/testimonials">Testimonials</NavLink>
@@ -33,7 +36,10 @@ export default function Navbar() {
             <NavLink className="navlink" to="/Logout" onClick={logout}>Logout</NavLink>
           </li>
         </ul>
-      </main>
+      </div>
+      <div id="mobileMenu">
+        <HiOutlineMenu size="40px" />
+      </div>
     </div>
   );
 }

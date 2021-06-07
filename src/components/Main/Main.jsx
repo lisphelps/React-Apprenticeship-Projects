@@ -3,7 +3,7 @@ import './Main.css';
 import React from 'react';
 import useFetch from '../api/useFetch';
 import Box from '../Box/Box';
-import Navbar from '../Navbar/Navbar';
+import Navigation from '../Navigation/Navigation';
 
 export default function Main() {
   const { data: Punchy } = useFetch('https://acnhapi.com/v1/villagers/48');
@@ -16,7 +16,7 @@ export default function Main() {
 
   return (
     <div className="Main">
-      <Navbar />
+      <Navigation />
       <div className="Bubbles">
         {villagers.map((villager) => villager.id && (
         <Box
