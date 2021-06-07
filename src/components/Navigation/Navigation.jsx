@@ -1,17 +1,12 @@
-import React, { useContext } from 'react';
-import { NavLink } from 'react-router-dom';
-import './Navigation.css';
+import React, { useState } from 'react';
 import { HiOutlineMenu } from 'react-icons/hi';
 import nookfloat from './nookfloat.gif';
-import { AuthContext } from '../api/Authentication';
+import NavLinks from './NavLinks';
+import './Navigation.css';
 
 export default function Navigation() {
-  const { setIsLoggedIn } = useContext(AuthContext);
   const user = sessionStorage.getItem('user');
-  const logout = () => {
-    setIsLoggedIn(false);
-    sessionStorage.clear('user');
-  };
+  const [open, setOpen] = useState(false);
 
   return (
     <div className="nav">
@@ -25,20 +20,11 @@ export default function Navigation() {
         </h2>
       </div>
       <div id="desktopMenu">
-        <ul>
-          <li>
-            <NavLink className="navlink" activeClassName="navactive" to="/testimonials">Testimonials</NavLink>
-          </li>
-          <li>
-            <NavLink className="navlink" activeClassName="navactive" to="/shop">Shop</NavLink>
-          </li>
-          <li>
-            <NavLink className="navlink" to="/Logout" onClick={logout}>Logout</NavLink>
-          </li>
-        </ul>
+        <NavLinks />
       </div>
       <div id="mobileMenu">
-        <HiOutlineMenu size="40px" />
+        <HiOutlineMenu size="40px" onClick={() => setOpen(!open)} />
+        {open && <NavLinks />}
       </div>
     </div>
   );

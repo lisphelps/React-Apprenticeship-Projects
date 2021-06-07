@@ -10,17 +10,6 @@
     height: 55px;
 }
 
-.nav ul li {
-    display: inline-block;
-    text-align: center;
-    margin: 3px 15px;
-    font-size: 20px;
-}
-
-.navlink.navactive {
-    color: hsl(249, 10%, 26%);
-}
-
 #nook {
     float: left;
     border-radius: 30px;
@@ -32,8 +21,32 @@
     background-color: black;
 }
 
+.nav ul li {
+    display: inline-block;
+    text-align: center;
+    margin: 3px 15px;
+    font-size: 20px;
+}
+
+.navlink.navactive {
+    color: hsl(249, 10%, 26%);
+}
+
 #mobileMenu {
     display: none;
+}
+
+#mobileMenu ul {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 84px;
+    right: 0;
+    background-color: #ffffffe8
+}
+
+.hamburger {
+    cursor: pointer;
 }
 
 @media only screen and (max-width: 600px) {
@@ -45,6 +58,6 @@
         display: inline-block;
         position: absolute;
         right: 5%;
-        top: 12%;
+        top: 20%;
     }
 }
