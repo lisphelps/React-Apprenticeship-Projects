@@ -1,23 +1,24 @@
 {
   "files": {
-    "main.css": "/React-Apprenticeship-Projects/static/css/main.a965f7c3.chunk.css",
-    "main.js": "/React-Apprenticeship-Projects/static/js/main.c215d5cb.chunk.js",
-    "main.js.map": "/React-Apprenticeship-Projects/static/js/main.c215d5cb.chunk.js.map",
+    "main.css": "/React-Apprenticeship-Projects/static/css/main.9b4c2a96.chunk.css",
+    "main.js": "/React-Apprenticeship-Projects/static/js/main.6e2099be.chunk.js",
+    "main.js.map": "/React-Apprenticeship-Projects/static/js/main.6e2099be.chunk.js.map",
     "runtime-main.js": "/React-Apprenticeship-Projects/static/js/runtime-main.73eba237.js",
     "runtime-main.js.map": "/React-Apprenticeship-Projects/static/js/runtime-main.73eba237.js.map",
-    "static/js/2.6ee6ae8a.chunk.js": "/React-Apprenticeship-Projects/static/js/2.6ee6ae8a.chunk.js",
-    "static/js/2.6ee6ae8a.chunk.js.map": "/React-Apprenticeship-Projects/static/js/2.6ee6ae8a.chunk.js.map",
+    "static/js/2.6eee46e7.chunk.js": "/React-Apprenticeship-Projects/static/js/2.6eee46e7.chunk.js",
+    "static/js/2.6eee46e7.chunk.js.map": "/React-Apprenticeship-Projects/static/js/2.6eee46e7.chunk.js.map",
     "index.html": "/React-Apprenticeship-Projects/index.html",
-    "static/css/main.a965f7c3.chunk.css.map": "/React-Apprenticeship-Projects/static/css/main.a965f7c3.chunk.css.map",
-    "static/js/2.6ee6ae8a.chunk.js.LICENSE.txt": "/React-Apprenticeship-Projects/static/js/2.6ee6ae8a.chunk.js.LICENSE.txt",
+    "static/css/main.9b4c2a96.chunk.css.map": "/React-Apprenticeship-Projects/static/css/main.9b4c2a96.chunk.css.map",
+    "static/js/2.6eee46e7.chunk.js.LICENSE.txt": "/React-Apprenticeship-Projects/static/js/2.6eee46e7.chunk.js.LICENSE.txt",
     "static/media/Box.css": "/React-Apprenticeship-Projects/static/media/palmtree.2a806830.png",
     "static/media/Form.css": "/React-Apprenticeship-Projects/static/media/icon-error.b72f792e.svg",
-    "static/media/index.css": "/React-Apprenticeship-Projects/static/media/leaf-pattern-background.b14d83ae.jpg"
+    "static/media/index.css": "/React-Apprenticeship-Projects/static/media/leaf-pattern-background.b14d83ae.jpg",
+    "static/media/nookfloat.5b98e79b.gif": "/React-Apprenticeship-Projects/static/media/nookfloat.5b98e79b.gif"
   },
   "entrypoints": [
     "static/js/runtime-main.73eba237.js",
-    "static/js/2.6ee6ae8a.chunk.js",
-    "static/css/main.a965f7c3.chunk.css",
-    "static/js/main.c215d5cb.chunk.js"
+    "static/js/2.6eee46e7.chunk.js",
+    "static/css/main.9b4c2a96.chunk.css",
+    "static/js/main.6e2099be.chunk.js"
   ]
 }
