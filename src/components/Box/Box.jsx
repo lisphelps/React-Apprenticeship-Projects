@@ -10,6 +10,7 @@ function Box(props) {
   const { species } = props;
   const { personality } = props;
   const { saying } = props;
+  const { quote } = props;
 
   return (
     <div className={name} id="box" style={{ color: `${text}`, backgroundColor: `${bubble}` }}>
@@ -25,11 +26,7 @@ function Box(props) {
       </div>
       <div id="content">
         <h2>{ saying }</h2>
-        <p>
-          Tom Nook will loan you increasingly ridiculous sums of money payment due date.
-          The catch? You must build up and restore this island to literally anything.
-          You will receive random items through shaking trees and shooting gift laden balloons.
-        </p>
+        <p>{ quote }</p>
       </div>
     </div>
   );
@@ -43,6 +40,10 @@ Box.propTypes = {
   species: PropTypes.string.isRequired,
   personality: PropTypes.string.isRequired,
   saying: PropTypes.string.isRequired,
+  quote: PropTypes.string.isRequired,
 };
 
 export default Box;
+// Tom Nook will loan you increasingly ridiculous sums of money payment due date.
+// The catch? You must build up and restore this island to literally anything.
+// You will receive random items through shaking trees and shooting gift laden balloons.
