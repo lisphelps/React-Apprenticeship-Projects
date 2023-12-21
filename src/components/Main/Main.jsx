@@ -6,11 +6,11 @@ import Box from '../Box/Box';
 import Navigation from '../Navigation/Navigation';
 
 export default function Main() {
-  const { data: Punchy } = useFetch('https://acnhapi.com/v1/villagers/48');
-  const { data: Vladimir } = useFetch('https://acnhapi.com/v1/villagers/71');
-  const { data: Midge } = useFetch('https://acnhapi.com/v1/villagers/30');
-  const { data: Maddie } = useFetch('https://acnhapi.com/v1/villagers/120');
-  const { data: Sherb } = useFetch('https://acnhapi.com/v1/villagers/180');
+  const { data: Punchy } = useFetch('https://acnhapi.com/v1a/villagers/48');
+  const { data: Vladimir } = useFetch('https://acnhapi.com/v1a/villagers/71');
+  const { data: Midge } = useFetch('https://acnhapi.com/v1a/villagers/30');
+  const { data: Maddie } = useFetch('https://acnhapi.com/v1a/villagers/120');
+  const { data: Sherb } = useFetch('https://acnhapi.com/v1a/villagers/180');
   const villagers = [Punchy, Vladimir, Midge, Maddie, Sherb];
 
   Punchy.quote = "Do you have a favorite place? You know, a place where you can take a midday nap when you're tired? Huh? Oh me? Well, when you're out, sometimes I like to snooze on your floor!";
@@ -24,17 +24,17 @@ export default function Main() {
       <Navigation />
       <div className="Bubbles">
         {villagers.map((villager) => villager.id && (
-        <Box
-          key={villager.id}
-          name={villager.name["name-USen"]}
-          text={villager["text-color"]}
-          bubble={villager["bubble-color"]}
-          iconurl={villager.icon_uri}
-          species={villager.species}
-          personality={villager.personality}
-          saying={villager.saying}
-          quote={villager.quote}
-        />
+          <Box
+            key={villager.id}
+            name={villager.name["name-USen"]}
+            text={villager["text-color"]}
+            bubble={villager["bubble-color"]}
+            iconurl={villager.icon_uri}
+            species={villager.species}
+            personality={villager.personality}
+            saying={villager.saying}
+            quote={villager.quote}
+          />
         ))}
       </div>
     </div>
